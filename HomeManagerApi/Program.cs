@@ -1,4 +1,7 @@
 
+using HomeManagerApi.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace HomeManagerApi
 {
     public class Program
@@ -7,9 +10,13 @@ namespace HomeManagerApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            var connectionString = builder.Configuration.GetConnectionString("HomeManagerConnection");
+
+            builder.Services.AddDbContext<HomeManagerContext>(options => options.UseSqlServer(connectionString));
+
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers().AddNewtonsoftJson();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
