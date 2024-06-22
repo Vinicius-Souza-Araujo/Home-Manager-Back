@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HomeManagerApi</name>
+    </assembly>
+    <members>
+        <member name="M:HomeManagerApi.Controllers.CategoriaController.AddCategoria(HomeManagerApi.Data.Dtos.CreateCategoriaDto)">
+            <summary>
+            Adiciona uma nova categoria.
+            </summary>
+            <param name="categoriaDto">Objeto com os campos necessários para a criação de uma categoria.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
+            <response code="201">Caso a inserção seja feita com sucesso.</response>
+        </member>
+        <member name="T:HomeManagerApi.Migrations.CriandoTabelaCategoria">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeManagerApi.Migrations.CriandoTabelaCategoria.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeManagerApi.Migrations.CriandoTabelaCategoria.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeManagerApi.Migrations.CriandoTabelaCategoria.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

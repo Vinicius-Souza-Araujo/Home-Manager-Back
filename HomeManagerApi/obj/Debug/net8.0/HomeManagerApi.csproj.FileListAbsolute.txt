@@ -139,3 +139,5 @@ C:\Users\vinic\OneDrive\Área de Trabalho\Projeto\home-manager-back\HomeManagerA
 C:\Users\vinic\OneDrive\Área de Trabalho\Projeto\home-manager-back\HomeManagerApi\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\vinic\OneDrive\Área de Trabalho\Projeto\home-manager-back\HomeManagerApi\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\vinic\OneDrive\Área de Trabalho\Projeto\home-manager-back\HomeManagerApi\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\vinic\OneDrive\Área de Trabalho\Projeto\home-manager-back\HomeManagerApi\bin\Debug\net8.0\HomeManagerApi.xml
+C:\Users\vinic\OneDrive\Área de Trabalho\Projeto\home-manager-back\HomeManagerApi\obj\Debug\net8.0\HomeManagerApi.xml

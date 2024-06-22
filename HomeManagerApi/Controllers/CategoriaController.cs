@@ -22,8 +22,14 @@ namespace HomeManagerApi.Controllers
             _context = context;
         }
 
-
+        /// <summary>
+        /// Adiciona uma nova categoria.
+        /// </summary>
+        /// <param name="categoriaDto">Objeto com os campos necessários para a criação de uma categoria.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
+        /// <response code="201">Caso a inserção seja feita com sucesso.</response>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public IActionResult AddCategoria([FromBody] CreateCategoriaDto categoriaDto)
         {
             Categoria categoria = new Categoria 
