@@ -6,6 +6,7 @@ using HomeManagerApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace HomeManagerApi.Controllers
@@ -30,7 +31,7 @@ namespace HomeManagerApi.Controllers
         /// <response code="201">Caso a inserção seja feita com sucesso.</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
-        public IActionResult AddCategoria([FromBody] CreateCategoriaDto categoriaDto)
+        public async Task<IActionResult> AddCategoriaAsync([FromBody] CreateCategoriaDto categoriaDto)
         {
             Categoria categoria = new Categoria 
             { 
@@ -38,17 +39,18 @@ namespace HomeManagerApi.Controllers
                 Grupo = categoriaDto.Grupo
             };
 
-           _context.Categorias.Add(categoria);
-            _context.SaveChanges();
-           return CreatedAtAction(nameof(GetByCategoria), new { id = categoria.Id} ,categoria);
+           await _context.Categorias.AddAsync(categoria);
+           await _context.SaveChangesAsync();
+
+           return CreatedAtAction(nameof(GetByCategoriaAsync), new { id = categoria.Id} ,categoria);
         }
 
         [HttpGet]
-        public IEnumerable<ReadCategoriaDto> GetAllCategorias([FromQuery]int skip = 0, [FromQuery]int take = 10)
+        public async Task<IEnumerable<ReadCategoriaDto>> GetAllCategoriasAsync([FromQuery]int skip = 0, [FromQuery]int take = 10)
         {
            //return _context.Categorias.Skip(skip).Take(take);
 
-            var categorias = _context.Categorias
+            var categorias = await _context.Categorias
                  .Skip(skip)
                  .Take(take)
                  .Select(categoria => new ReadCategoriaDto
@@ -57,15 +59,15 @@ namespace HomeManagerApi.Controllers
                      Nome = categoria.Nome,
                      Grupo = categoria.Grupo
                  })
-                 .ToList();
+                 .ToListAsync();
 
             return categorias;
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetByCategoria(int id)
+        public async Task<IActionResult> GetByCategoriaAsync(int id)
         {
-            var categoria = _context.Categorias.FirstOrDefault(categoria => categoria.Id == id);
+            var categoria = await _context.Categorias.FirstOrDefaultAsync(categoria => categoria.Id == id);
             if (categoria == null) return NotFound();
 
             var categoriaDto = new ReadCategoriaDto
@@ -79,25 +81,25 @@ namespace HomeManagerApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateCategoria(int id, [FromBody] UpdateCategoriaDto categoriaDto)
+        public async Task<IActionResult> UpdateCategoriaAsync(int id, [FromBody] UpdateCategoriaDto categoriaDto)
         {
-            var categoria = _context.Categorias.FirstOrDefault(categoria => categoria.Id == id);
+            var categoria = await _context.Categorias.FirstOrDefaultAsync(categoria => categoria.Id == id);
             
             if (categoria == null) return NotFound();
             
             categoria.Nome = categoriaDto.Nome;
             categoria.Grupo = categoriaDto.Grupo;
 
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return NoContent();
 
         }
 
         [HttpPatch("{id}")]
-        public IActionResult PartialUpdateCategoria(int id, [FromBody] JsonPatchDocument<UpdateCategoriaDto> patch)
+        public async Task<IActionResult> PartialUpdateCategoriaAsync(int id, [FromBody] JsonPatchDocument<UpdateCategoriaDto> patch)
         {
-            var categoria = _context.Categorias.FirstOrDefault(categoria => categoria.Id == id);
+            var categoria = await _context.Categorias.FirstOrDefaultAsync(categoria => categoria.Id == id);
 
             if (categoria == null) return NotFound();
 
@@ -117,21 +119,21 @@ namespace HomeManagerApi.Controllers
             categoria.Nome = categoriaParaAtualizar.Nome;
             categoria.Grupo = categoriaParaAtualizar.Grupo;
 
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return NoContent();
 
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteCategoria(int id)
+        public async Task<IActionResult> DeleteCategoriaAsync(int id)
         {
-            var categoria = _context.Categorias.FirstOrDefault(categoria => categoria.Id == id);
+            var categoria = await _context.Categorias.FirstOrDefaultAsync(categoria => categoria.Id == id);
 
             if (categoria == null) return NotFound();
 
             _context.Categorias.Remove(categoria);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return NoContent();
         }
