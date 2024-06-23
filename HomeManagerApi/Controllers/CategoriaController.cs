@@ -29,10 +29,18 @@ namespace HomeManagerApi.Controllers
         /// <param name="categoriaDto">Objeto com os campos necessários para a criação de uma categoria.</param>
         /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
         /// <response code="201">Caso a inserção seja feita com sucesso.</response>
+        /// <response code="400">Dados de entrada inválidos.</response>
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> AddCategoriaAsync([FromBody] CreateCategoriaDto categoriaDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             Categoria categoria = new Categoria 
             { 
                 Nome = categoriaDto.Nome,
@@ -45,7 +53,15 @@ namespace HomeManagerApi.Controllers
            return CreatedAtAction(nameof(GetByCategoriaAsync), new { id = categoria.Id} ,categoria);
         }
 
+        /// <summary>
+        /// Obtém uma lista de categorias.
+        /// </summary>
+        /// <param name="skip">Número de registros para pular.</param>
+        /// <param name="take">Número de registros para retornar.</param>
+        /// <returns>Uma lista de <see cref="ReadCategoriaDto"/> contendo as categorias.</returns>
+        /// <response code="200">Caso a operação seja bem-sucedida.</response>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IEnumerable<ReadCategoriaDto>> GetAllCategoriasAsync([FromQuery]int skip = 0, [FromQuery]int take = 10)
         {
            //return _context.Categorias.Skip(skip).Take(take);
@@ -64,7 +80,17 @@ namespace HomeManagerApi.Controllers
             return categorias;
         }
 
+
+        /// <summary>
+        /// Obtém uma categoria pelo seu ID.
+        /// </summary>
+        /// <param name="id">ID da categoria.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> contendo a categoria.</returns>
+        /// <response code="200">Caso a operação seja bem-sucedida.</response>
+        /// <response code="404">Caso a categoria não seja encontrada.</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetByCategoriaAsync(int id)
         {
             var categoria = await _context.Categorias.FirstOrDefaultAsync(categoria => categoria.Id == id);
@@ -80,9 +106,28 @@ namespace HomeManagerApi.Controllers
             return Ok(categoriaDto);
         }
 
+        /// <summary>
+        /// Atualiza uma categoria existente.
+        /// </summary>
+        /// <param name="id">ID da categoria a ser atualizada.</param>
+        /// <param name="categoriaDto">Objeto com os campos necessários para a atualização da categoria.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
+        /// <response code="204">Caso a atualização seja bem-sucedida.</response>
+        /// <response code="404">Caso a categoria não seja encontrada.</response>
+        /// <response code="400">Dados de entrada inválidos.</response>
+
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
         public async Task<IActionResult> UpdateCategoriaAsync(int id, [FromBody] UpdateCategoriaDto categoriaDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var categoria = await _context.Categorias.FirstOrDefaultAsync(categoria => categoria.Id == id);
             
             if (categoria == null) return NotFound();
@@ -96,7 +141,19 @@ namespace HomeManagerApi.Controllers
 
         }
 
+        /// <summary>
+        /// Atualiza parcialmente uma categoria existente.
+        /// </summary>
+        /// <param name="id">ID da categoria a ser atualizada.</param>
+        /// <param name="patch">Objeto <see cref="JsonPatchDocument"/> contendo as alterações a serem aplicadas.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
+        /// <response code="204">Caso a atualização seja bem-sucedida.</response>
+        /// <response code="404">Caso a categoria não seja encontrada.</response>
+        /// <response code="400">Dados de entrada inválidos.</response>
         [HttpPatch("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> PartialUpdateCategoriaAsync(int id, [FromBody] JsonPatchDocument<UpdateCategoriaDto> patch)
         {
             var categoria = await _context.Categorias.FirstOrDefaultAsync(categoria => categoria.Id == id);
@@ -125,7 +182,16 @@ namespace HomeManagerApi.Controllers
 
         }
 
+        /// <summary>
+        /// Deleta uma categoria existente.
+        /// </summary>
+        /// <param name="id">ID da categoria a ser deletada.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
+        /// <response code="204">Caso a exclusão seja bem-sucedida.</response>
+        /// <response code="404">Caso a categoria não seja encontrada.</response>
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteCategoriaAsync(int id)
         {
             var categoria = await _context.Categorias.FirstOrDefaultAsync(categoria => categoria.Id == id);

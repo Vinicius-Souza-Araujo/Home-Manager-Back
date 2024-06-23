@@ -4,13 +4,63 @@
         <name>HomeManagerApi</name>
     </assembly>
     <members>
-        <member name="M:HomeManagerApi.Controllers.CategoriaController.AddCategoria(HomeManagerApi.Data.Dtos.CreateCategoriaDto)">
+        <member name="M:HomeManagerApi.Controllers.CategoriaController.AddCategoriaAsync(HomeManagerApi.Data.Dtos.CreateCategoriaDto)">
             <summary>
             Adiciona uma nova categoria.
             </summary>
             <param name="categoriaDto">Objeto com os campos necessários para a criação de uma categoria.</param>
             <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
             <response code="201">Caso a inserção seja feita com sucesso.</response>
+            <response code="400">Dados de entrada inválidos.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.CategoriaController.GetAllCategoriasAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém uma lista de categorias.
+            </summary>
+            <param name="skip">Número de registros para pular.</param>
+            <param name="take">Número de registros para retornar.</param>
+            <returns>Uma lista de <see cref="T:HomeManagerApi.Data.Dtos.ReadCategoriaDto"/> contendo as categorias.</returns>
+            <response code="200">Caso a operação seja bem-sucedida.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.CategoriaController.GetByCategoriaAsync(System.Int32)">
+            <summary>
+            Obtém uma categoria pelo seu ID.
+            </summary>
+            <param name="id">ID da categoria.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> contendo a categoria.</returns>
+            <response code="200">Caso a operação seja bem-sucedida.</response>
+            <response code="404">Caso a categoria não seja encontrada.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.CategoriaController.UpdateCategoriaAsync(System.Int32,HomeManagerApi.Data.Dtos.UpdateCategoriaDto)">
+            <summary>
+            Atualiza uma categoria existente.
+            </summary>
+            <param name="id">ID da categoria a ser atualizada.</param>
+            <param name="categoriaDto">Objeto com os campos necessários para a atualização da categoria.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
+            <response code="204">Caso a atualização seja bem-sucedida.</response>
+            <response code="404">Caso a categoria não seja encontrada.</response>
+            <response code="400">Dados de entrada inválidos.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.CategoriaController.PartialUpdateCategoriaAsync(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{HomeManagerApi.Data.Dtos.UpdateCategoriaDto})">
+            <summary>
+            Atualiza parcialmente uma categoria existente.
+            </summary>
+            <param name="id">ID da categoria a ser atualizada.</param>
+            <param name="patch">Objeto <see cref="T:Azure.JsonPatchDocument"/> contendo as alterações a serem aplicadas.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
+            <response code="204">Caso a atualização seja bem-sucedida.</response>
+            <response code="404">Caso a categoria não seja encontrada.</response>
+            <response code="400">Dados de entrada inválidos.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.CategoriaController.DeleteCategoriaAsync(System.Int32)">
+            <summary>
+            Deleta uma categoria existente.
+            </summary>
+            <param name="id">ID da categoria a ser deletada.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
+            <response code="204">Caso a exclusão seja bem-sucedida.</response>
+            <response code="404">Caso a categoria não seja encontrada.</response>
         </member>
         <member name="T:HomeManagerApi.Migrations.CriandoTabelaCategoria">
             <inheritdoc />
