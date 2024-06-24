@@ -74,5 +74,17 @@
         <member name="M:HomeManagerApi.Migrations.CriandoTabelaCategoria.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:HomeManagerApi.Migrations.CriandoTabelaMarca">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeManagerApi.Migrations.CriandoTabelaMarca.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeManagerApi.Migrations.CriandoTabelaMarca.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeManagerApi.Migrations.CriandoTabelaMarca.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
