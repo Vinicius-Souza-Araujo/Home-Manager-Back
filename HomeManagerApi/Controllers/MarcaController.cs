@@ -19,6 +19,13 @@ namespace HomeManagerApi.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Obtém uma lista de marcas.
+        /// </summary>
+        /// <param name="skip">Número de registros para pular.</param>
+        /// <param name="take">Número de registros para retornar.</param>
+        /// <returns>Uma lista de <see cref="ReadMarcaDto"/> contendo as marcas.</returns>
+        /// <response code="200">Caso a operação seja bem-sucedida.</response>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IEnumerable<ReadMarcaDto>> GetAllMarcasAsync([FromQuery] int skip = 0, [FromQuery] int take = 10)
@@ -34,6 +41,14 @@ namespace HomeManagerApi.Controllers
             return marcas;
         }
 
+
+        /// <summary>
+        /// Obtém uma marca pelo seu ID.
+        /// </summary>
+        /// <param name="id">ID da marca.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> contendo a marca.</returns>
+        /// <response code="200">Caso a operação seja bem-sucedida.</response>
+        /// <response code="404">Caso a marca não seja encontrada.</response>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -53,6 +68,13 @@ namespace HomeManagerApi.Controllers
             return Ok(marcaDto);
         }
 
+        /// <summary>
+        /// Adiciona uma nova marca.
+        /// </summary>
+        /// <param name="marcaDto">Objeto com os campos necessários para a criação de uma marca.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
+        /// <response code="201">Caso a inserção seja feita com sucesso.</response>
+        /// <response code="400">Dados de entrada inválidos.</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -74,10 +96,19 @@ namespace HomeManagerApi.Controllers
 
             //return CreatedAtAction(nameof(GetByMarcaAsync), new { id = marca.Id }, marca);
 
-            return Created($"/api/Categoria/{marca.Id}", new { id = marca.Id });
+            return Created($"/api/Marca/{marca.Id}", new { id = marca.Id });
 
         }
 
+        /// <summary>
+        /// Atualiza uma marca existente.
+        /// </summary>
+        /// <param name="id">ID da marca a ser atualizada.</param>
+        /// <param name="marcaDto">Objeto com os campos necessários para a atualização da marca.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
+        /// <response code="204">Caso a atualização seja bem-sucedida.</response>
+        /// <response code="404">Caso a marca não seja encontrada.</response>
+        /// <response code="400">Dados de entrada inválidos.</response>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -102,6 +133,15 @@ namespace HomeManagerApi.Controllers
 
         }
 
+        /// <summary>
+        /// Atualiza parcialmente uma marca existente.
+        /// </summary>
+        /// <param name="id">ID da marca a ser atualizada.</param>
+        /// <param name="patch">Objeto <see cref="JsonPatchDocument"/> contendo as alterações a serem aplicadas.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
+        /// <response code="204">Caso a atualização seja bem-sucedida.</response>
+        /// <response code="404">Caso a marca não seja encontrada.</response>
+        /// <response code="400">Dados de entrada inválidos.</response>
         [HttpPatch("{id}")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -135,6 +175,13 @@ namespace HomeManagerApi.Controllers
 
         }
 
+        /// <summary>
+        /// Deleta uma marca existente.
+        /// </summary>
+        /// <param name="id">ID da marca a ser deletada.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
+        /// <response code="204">Caso a exclusão seja bem-sucedida.</response>
+        /// <response code="404">Caso a marca não seja encontrada.</response>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

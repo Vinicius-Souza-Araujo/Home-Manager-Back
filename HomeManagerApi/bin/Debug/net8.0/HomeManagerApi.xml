@@ -47,7 +47,7 @@
             Atualiza parcialmente uma categoria existente.
             </summary>
             <param name="id">ID da categoria a ser atualizada.</param>
-            <param name="patch">Objeto <see cref="T:Azure.JsonPatchDocument"/> contendo as alterações a serem aplicadas.</param>
+            <param name="patch">Objeto <see cref="T:Microsoft.AspNetCore.JsonPatch.JsonPatchDocument"/> contendo as alterações a serem aplicadas.</param>
             <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
             <response code="204">Caso a atualização seja bem-sucedida.</response>
             <response code="404">Caso a categoria não seja encontrada.</response>
@@ -61,6 +61,64 @@
             <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
             <response code="204">Caso a exclusão seja bem-sucedida.</response>
             <response code="404">Caso a categoria não seja encontrada.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.MarcaController.GetAllMarcasAsync(System.Int32,System.Int32)">
+            <summary>
+            Obtém uma lista de marcas.
+            </summary>
+            <param name="skip">Número de registros para pular.</param>
+            <param name="take">Número de registros para retornar.</param>
+            <returns>Uma lista de <see cref="T:HomeManagerApi.Data.Dtos.ReadMarcaDto"/> contendo as marcas.</returns>
+            <response code="200">Caso a operação seja bem-sucedida.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.MarcaController.GetByMarcaAsync(System.Int32)">
+            <summary>
+            Obtém uma marca pelo seu ID.
+            </summary>
+            <param name="id">ID da marca.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> contendo a marca.</returns>
+            <response code="200">Caso a operação seja bem-sucedida.</response>
+            <response code="404">Caso a marca não seja encontrada.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.MarcaController.AddMarcaAsync(HomeManagerApi.Data.Dtos.CreateMarcaDto)">
+            <summary>
+            Adiciona uma nova marca.
+            </summary>
+            <param name="marcaDto">Objeto com os campos necessários para a criação de uma marca.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
+            <response code="201">Caso a inserção seja feita com sucesso.</response>
+            <response code="400">Dados de entrada inválidos.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.MarcaController.UpdateMarcaAsync(System.Int32,HomeManagerApi.Data.Dtos.UpdateMarcaDto)">
+            <summary>
+            Atualiza uma marca existente.
+            </summary>
+            <param name="id">ID da marca a ser atualizada.</param>
+            <param name="marcaDto">Objeto com os campos necessários para a atualização da marca.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
+            <response code="204">Caso a atualização seja bem-sucedida.</response>
+            <response code="404">Caso a marca não seja encontrada.</response>
+            <response code="400">Dados de entrada inválidos.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.MarcaController.PartialUpdateMarcaAsync(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{HomeManagerApi.Data.Dtos.UpdateMarcaDto})">
+            <summary>
+            Atualiza parcialmente uma marca existente.
+            </summary>
+            <param name="id">ID da marca a ser atualizada.</param>
+            <param name="patch">Objeto <see cref="T:Microsoft.AspNetCore.JsonPatch.JsonPatchDocument"/> contendo as alterações a serem aplicadas.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
+            <response code="204">Caso a atualização seja bem-sucedida.</response>
+            <response code="404">Caso a marca não seja encontrada.</response>
+            <response code="400">Dados de entrada inválidos.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.MarcaController.DeleteMarcaAsync(System.Int32)">
+            <summary>
+            Deleta uma marca existente.
+            </summary>
+            <param name="id">ID da marca a ser deletada.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
+            <response code="204">Caso a exclusão seja bem-sucedida.</response>
+            <response code="404">Caso a marca não seja encontrada.</response>
         </member>
         <member name="T:HomeManagerApi.Migrations.CriandoTabelaCategoria">
             <inheritdoc />

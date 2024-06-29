@@ -11,20 +11,8 @@
       "RelativeMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|c:\\users\\vinic\\onedrive\\\u00E1rea de trabalho\\projeto\\home-manager-back\\homemanagerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|c:\\users\\vinic\\onedrive\\\u00E1rea de trabalho\\projeto\\home-manager-back\\homemanagerapi\\models\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|solutionrelative:models\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|c:\\users\\vinic\\onedrive\\\u00E1rea de trabalho\\projeto\\home-manager-back\\homemanagerapi\\homemanagerapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|solutionrelative:homemanagerapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|c:\\users\\vinic\\onedrive\\\u00E1rea de trabalho\\projeto\\home-manager-back\\homemanagerapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9AA4152-F946-412D-A607-1E9EE5CA0E69}|HomeManagerApi.csproj|c:\\users\\vinic\\onedrive\\\u00E1rea de trabalho\\projeto\\home-manager-back\\homemanagerapi\\data\\dtos\\createmarcadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -136,48 +124,9 @@
               "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
               "ToolTip": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Controllers\\CategoriaController.cs",
               "RelativeToolTip": "Controllers\\CategoriaController.cs",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAQwG8AAAAAAAAA",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAmwMUAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T21:20:39.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-19T19:47:48.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeManagerApi.http",
-              "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\HomeManagerApi.http",
-              "RelativeDocumentMoniker": "HomeManagerApi.http",
-              "ToolTip": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\HomeManagerApi.http",
-              "RelativeToolTip": "HomeManagerApi.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-06-17T17:19:38.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBkAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T17:16:55.515Z",
               "EditorCaption": ""
             },
             {
@@ -188,14 +137,14 @@
               "RelativeDocumentMoniker": "Controllers\\MarcaController.cs",
               "ToolTip": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Controllers\\MarcaController.cs",
               "RelativeToolTip": "Controllers\\MarcaController.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAwwEwAAABQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T01:36:25.255Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Marca.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Models\\Marca.cs",
               "RelativeDocumentMoniker": "Models\\Marca.cs",
@@ -203,12 +152,11 @@
               "RelativeToolTip": "Models\\Marca.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T02:19:35.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T02:19:35.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "CreateMarcaDto.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Data\\Dtos\\CreateMarcaDto.cs",
               "RelativeDocumentMoniker": "Data\\Dtos\\CreateMarcaDto.cs",
@@ -216,12 +164,11 @@
               "RelativeToolTip": "Data\\Dtos\\CreateMarcaDto.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAAAwAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T23:40:53.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T23:40:53.448Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "UpdateMarcaDto.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Data\\Dtos\\UpdateMarcaDto.cs",
               "RelativeDocumentMoniker": "Data\\Dtos\\UpdateMarcaDto.cs",
@@ -229,12 +176,11 @@
               "RelativeToolTip": "Data\\Dtos\\UpdateMarcaDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T23:55:38.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T23:55:38.369Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "CreateCategoriaDto.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Data\\Dtos\\CreateCategoriaDto.cs",
               "RelativeDocumentMoniker": "Data\\Dtos\\CreateCategoriaDto.cs",
@@ -242,12 +188,11 @@
               "RelativeToolTip": "Data\\Dtos\\CreateCategoriaDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T15:48:57.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-20T15:48:57.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "UpdateCategoriaDto.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Data\\Dtos\\UpdateCategoriaDto.cs",
               "RelativeDocumentMoniker": "Data\\Dtos\\UpdateCategoriaDto.cs",
@@ -255,12 +200,11 @@
               "RelativeToolTip": "Data\\Dtos\\UpdateCategoriaDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:37:52.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-21T13:37:52.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "ReadCategoriaDto.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Data\\Dtos\\ReadCategoriaDto.cs",
               "RelativeDocumentMoniker": "Data\\Dtos\\ReadCategoriaDto.cs",
@@ -268,12 +212,11 @@
               "RelativeToolTip": "Data\\Dtos\\ReadCategoriaDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T15:35:28.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-21T15:35:28.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "ReadMarcaDto.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Data\\Dtos\\ReadMarcaDto.cs",
               "RelativeDocumentMoniker": "Data\\Dtos\\ReadMarcaDto.cs",
@@ -281,12 +224,11 @@
               "RelativeToolTip": "Data\\Dtos\\ReadMarcaDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T23:21:23.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T23:21:23.291Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "HomeManagerContext.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Data\\HomeManagerContext.cs",
               "RelativeDocumentMoniker": "Data\\HomeManagerContext.cs",
@@ -294,12 +236,11 @@
               "RelativeToolTip": "Data\\HomeManagerContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T19:38:40.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T19:38:40.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
               "Title": "20240624023740_CriandoTabelaMarca.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Migrations\\20240624023740_CriandoTabelaMarca.cs",
               "RelativeDocumentMoniker": "Migrations\\20240624023740_CriandoTabelaMarca.cs",
@@ -307,12 +248,11 @@
               "RelativeToolTip": "Migrations\\20240624023740_CriandoTabelaMarca.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T02:37:40.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T02:37:40.961Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 11,
               "Title": "20240620140040_CriandoTabelaCategoria.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Migrations\\20240620140040_CriandoTabelaCategoria.cs",
               "RelativeDocumentMoniker": "Migrations\\20240620140040_CriandoTabelaCategoria.cs",
@@ -324,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 12,
               "Title": "HomeManagerContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Migrations\\HomeManagerContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\HomeManagerContextModelSnapshot.cs",
@@ -336,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 13,
               "Title": "Categoria.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Models\\Categoria.cs",
               "RelativeDocumentMoniker": "Models\\Categoria.cs",
@@ -348,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 14,
               "Title": "HomeManagerApi.csproj",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\HomeManagerApi.csproj",
               "RelativeDocumentMoniker": "HomeManagerApi.csproj",
@@ -360,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 15,
               "Title": "Grupo.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Enums\\Grupo.cs",
               "RelativeDocumentMoniker": "Enums\\Grupo.cs",
@@ -372,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 16,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
@@ -384,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 17,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\OneDrive\\\u00C1rea de Trabalho\\Projeto\\home-manager-back\\HomeManagerApi\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "WeatherForecast.cs",
