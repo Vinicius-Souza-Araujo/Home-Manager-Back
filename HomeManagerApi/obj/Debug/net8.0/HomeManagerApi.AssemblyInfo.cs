@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HomeManagerApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad4d84dfcd3a9af76e145bd1d438dba1426ad406")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+926ed513f30a2c76171f7ea985fe15cc78982876")]
 [assembly: System.Reflection.AssemblyProductAttribute("HomeManagerApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HomeManagerApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

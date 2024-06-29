@@ -4,15 +4,6 @@
         <name>HomeManagerApi</name>
     </assembly>
     <members>
-        <member name="M:HomeManagerApi.Controllers.CategoriaController.AddCategoriaAsync(HomeManagerApi.Data.Dtos.CreateCategoriaDto)">
-            <summary>
-            Adiciona uma nova categoria.
-            </summary>
-            <param name="categoriaDto">Objeto com os campos necessários para a criação de uma categoria.</param>
-            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
-            <response code="201">Caso a inserção seja feita com sucesso.</response>
-            <response code="400">Dados de entrada inválidos.</response>
-        </member>
         <member name="M:HomeManagerApi.Controllers.CategoriaController.GetAllCategoriasAsync(System.Int32,System.Int32)">
             <summary>
             Obtém uma lista de categorias.
@@ -30,6 +21,15 @@
             <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> contendo a categoria.</returns>
             <response code="200">Caso a operação seja bem-sucedida.</response>
             <response code="404">Caso a categoria não seja encontrada.</response>
+        </member>
+        <member name="M:HomeManagerApi.Controllers.CategoriaController.AddCategoriaAsync(HomeManagerApi.Data.Dtos.CreateCategoriaDto)">
+            <summary>
+            Adiciona uma nova categoria.
+            </summary>
+            <param name="categoriaDto">Objeto com os campos necessários para a criação de uma categoria.</param>
+            <returns>Um objeto <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> indicando o resultado da operação.</returns>
+            <response code="201">Caso a inserção seja feita com sucesso.</response>
+            <response code="400">Dados de entrada inválidos.</response>
         </member>
         <member name="M:HomeManagerApi.Controllers.CategoriaController.UpdateCategoriaAsync(System.Int32,HomeManagerApi.Data.Dtos.UpdateCategoriaDto)">
             <summary>

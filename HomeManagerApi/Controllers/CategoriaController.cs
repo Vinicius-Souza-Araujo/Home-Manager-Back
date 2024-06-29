@@ -23,35 +23,7 @@ namespace HomeManagerApi.Controllers
             _context = context;
         }
 
-        /// <summary>
-        /// Adiciona uma nova categoria.
-        /// </summary>
-        /// <param name="categoriaDto">Objeto com os campos necessários para a criação de uma categoria.</param>
-        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
-        /// <response code="201">Caso a inserção seja feita com sucesso.</response>
-        /// <response code="400">Dados de entrada inválidos.</response>
-
-        [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> AddCategoriaAsync([FromBody] CreateCategoriaDto categoriaDto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            Categoria categoria = new Categoria 
-            { 
-                Nome = categoriaDto.Nome,
-                Grupo = categoriaDto.Grupo
-            };
-
-           await _context.Categorias.AddAsync(categoria);
-           await _context.SaveChangesAsync();
-
-           return CreatedAtAction(nameof(GetByCategoriaAsync), new { id = categoria.Id} ,categoria);
-        }
+        
 
         /// <summary>
         /// Obtém uma lista de categorias.
@@ -104,6 +76,41 @@ namespace HomeManagerApi.Controllers
             };
 
             return Ok(categoriaDto);
+        }
+
+
+        /// <summary>
+        /// Adiciona uma nova categoria.
+        /// </summary>
+        /// <param name="categoriaDto">Objeto com os campos necessários para a criação de uma categoria.</param>
+        /// <returns>Um objeto <see cref="IActionResult"/> indicando o resultado da operação.</returns>
+        /// <response code="201">Caso a inserção seja feita com sucesso.</response>
+        /// <response code="400">Dados de entrada inválidos.</response>
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> AddCategoriaAsync([FromBody] CreateCategoriaDto categoriaDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            Categoria categoria = new Categoria
+            {
+                Nome = categoriaDto.Nome,
+                Grupo = categoriaDto.Grupo
+            };
+
+            await _context.Categorias.AddAsync(categoria);
+            await _context.SaveChangesAsync();
+
+            //var action = CreatedAtAction(nameof(GetByCategoriaAsync), new { id = categoria.Id }, categoria);
+            //return action;
+
+            return Created($"/api/Categoria/{categoria.Id}", new { id = categoria.Id });
+
         }
 
         /// <summary>
