@@ -144,5 +144,17 @@
         <member name="M:HomeManagerApi.Migrations.CriandoTabelaMarca.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:HomeManagerApi.Migrations.CriandoTabelaPatrimonio">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeManagerApi.Migrations.CriandoTabelaPatrimonio.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeManagerApi.Migrations.CriandoTabelaPatrimonio.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HomeManagerApi.Migrations.CriandoTabelaPatrimonio.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

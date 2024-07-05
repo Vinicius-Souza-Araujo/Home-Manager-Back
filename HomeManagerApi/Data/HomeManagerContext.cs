@@ -14,5 +14,6 @@ namespace HomeManagerApi.Data
 
         public DbSet<Marca> Marcas { get; set; }
 
+        public DbSet<Patrimonio> Patrimonios { get; set; }
     }
 }
